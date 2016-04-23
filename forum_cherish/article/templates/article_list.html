@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Python部落论坛</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-4"><h1>Python部落论坛</h1></div>
+    </div>
+    {% for block in bloks %}
+    <div class="blockitem">
+      <div class="row">
+        <div class="col-md-1">
+	<div class="col-md-8">
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h2 class="panel-title"><h4>{{block.namechar}}</h4></h2>
+	    </div>
+	    <div class="panel-body"><h5>{{ block.descriptionchar}}</h5></div>
+	  </div>
+	</div>
+	<div class="col-md-3">
+	  <div class="panel panel-default">
+	    <div class="panel-heading"><h4>管理员</h4></div>
+	      <div class="panel-body">
+	        <h5>{{ block.admin.username }}</h5>
+	      </div>
+	  </div>
+	</div>
+	</div>
+      </div>
+    </div>
+    {% endfor %}
+  </body>
+</html>
